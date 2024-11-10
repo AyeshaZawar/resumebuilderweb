@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <h2 class="section-title">Personal Information</h2>
+            <form id="resumeForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" rows="2"></textarea>
+                </div>
+
+                <h2 class="section-title">Professional Experience</h2>
+                <div id="experienceContainer">
+                    <!-- Experience entries will be added here -->
+                </div>
+                <button type="button" class="btn add-btn" id="addExperience">Add Experience</button>
+
+                <h2 class="section-title">Education</h2>
+                <div id="educationContainer">
+                    <!-- Education entries will be added here -->
+                </div>
+                <button type="button" class="btn add-btn" id="addEducation">Add Education</button>
+
+                <h2 class="section-title">Skills</h2>
+                <div class="form-group">
+                    <label for="skills">Skills (comma separated)</label>
+                    <textarea id="skills" rows="3"></textarea>
+                </div>
+
+                <div class="button-group">
+                    <button type="button" class="btn primary-btn" id="generateBtn">Generate Resume</button>
+                    <button type="button" class="btn secondary-btn" id="printBtn">Print</button>
+                    <button type="button" class="btn secondary-btn" id="downloadBtn">Download PDF</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="right-panel" id="resumePreview">
+            <!-- Resume preview will be generated here -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
